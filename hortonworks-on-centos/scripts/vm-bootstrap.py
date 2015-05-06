@@ -1992,7 +1992,7 @@ def create_blueprint(scenario_id):
       "hive-site": {
         "hive.auto.convert.join.noconditionaltask.size" : "716177408",
         "hive.tez.container.size" : "2048",
-        "hive.metastore.uris" : "thrift://%HOSTGROUP::master_3%:9083"
+        "hive.metastore.uris" : "thrift://%HOSTGROUP::master_3%:9083",
         
 	"javax.jdo.option.ConnectionPassword" : "hive",
 	"hive.tez.java.opts" : "-server -Xmx200m -Djava.net.preferIPv4Stack=true",
