@@ -140,80 +140,20 @@
                     "dataDisks": [
                         {
                             "name": "datadisk1",
-                            "diskSizeGB": "1023",
+                            "diskSizeGB": "128",
                             "lun": 0,
                             "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk0.vhd')]"
+                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds0/', parameters('vmName'), '-datadisk0.vhd')]"
                             },
                             "caching": "None",
                             "createOption": "Empty"
                         },
                         {
                             "name": "datadisk2",
-                            "diskSizeGB": "1023",
+                            "diskSizeGB": "128",
                             "lun": 1,
                             "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk1.vhd')]"
-                            },
-                            "caching": "None",
-                            "createOption": "Empty"
-                        },
-                        {
-                            "name": "datadisk3",
-                            "diskSizeGB": "1023",
-                            "lun": 2,
-                            "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk2.vhd')]"
-                            },
-                            "caching": "None",
-                            "createOption": "Empty"
-                        },
-                        {
-                            "name": "datadisk4",
-                            "diskSizeGB": "1023",
-                            "lun": 3,
-                            "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk3.vhd')]"
-                            },
-                            "caching": "None",
-                            "createOption": "Empty"
-                        },
-                        {
-                            "name": "datadisk5",
-                            "diskSizeGB": "1023",
-                            "lun": 4,
-                            "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk4.vhd')]"
-                            },
-                            "caching": "None",
-                            "createOption": "Empty"
-                        },
-                        {
-                            "name": "datadisk6",
-                            "diskSizeGB": "1023",
-                            "lun": 5,
-                            "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk5.vhd')]"
-                            },
-                            "caching": "None",
-                            "createOption": "Empty"
-                        },
-                        {
-                            "name": "datadisk7",
-                            "diskSizeGB": "1023",
-                            "lun": 6,
-                            "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk6.vhd')]"
-                            },
-                            "caching": "None",
-                            "createOption": "Empty"
-                        },
-                        {
-                            "name": "datadisk8",
-                            "diskSizeGB": "1023",
-                            "lun": 7,
-                            "vhd": {
-                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-datadisk7.vhd')]"
+                                "Uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds1/', parameters('vmName'), '-datadisk1.vhd')]"
                             },
                             "caching": "None",
                             "createOption": "Empty"
