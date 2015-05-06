@@ -2012,7 +2012,7 @@ def create_blueprint(scenario_id):
 	"hive.txn.max.open.batch": "1000",
 	"hive.txn.timeout": "300",
 	"hive.security.authorization.enabled": "false",
-	"hive.users.in.admin.role": "hue,hive",
+	"hive.users.in.admin.role": "hue,hive"
         
         
       }
