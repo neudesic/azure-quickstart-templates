@@ -462,9 +462,15 @@ def create_blueprint(scenario_id):
     {
       "name" : "master_1",
       "components" : [
-        {
-          "name" : "AMBARI_SERVER"
-        }, 
+       {
+         "name" : "AMBARI_SERVER"
+       }, 
+       {
+         "name" : "SECONDARY_NAMENODE"
+       },
+       {
+         "name" : "ZOOKEEPER_SERVER"
+       },
        {
          "name" : "FALCON_CLIENT"
        },
@@ -516,18 +522,18 @@ def create_blueprint(scenario_id):
     {
       "name" : "master_2",
       "components" : [        
-        {
-          "name" : "METRICS_COLLECTOR"
-        },
-	   {
-          "name" : "NAMENODE"
-        },		
-        {
-          "name" : "NIMBUS"
-        },
-		{
-          "name" : "ZOOKEEPER_SERVER"
-        },	   
+       {
+         "name" : "METRICS_COLLECTOR"
+       },
+       {
+         "name" : "NAMENODE"
+       },		
+       {
+         "name" : "NIMBUS"
+       },
+       {
+         "name" : "ZOOKEEPER_SERVER"
+       },	   
        {
          "name" : "FALCON_CLIENT"
        },
@@ -598,16 +604,10 @@ def create_blueprint(scenario_id):
          "name" : "KAFKA_BROKER"
        },
        {
-         "name" : "METRICS_MONITOR"
-       },
-       {
          "name" : "OOZIE_SERVER"
        },
        {
          "name" : "RESOURCEMANAGER"
-       },
-       {
-         "name" : "SECONDARY_NAMENODE"
        },
        {
          "name" : "WEBHCAT_SERVER"
@@ -801,9 +801,15 @@ def create_blueprint(scenario_id):
     {
       "name" : "master_1",
       "components" : [
-        {
-          "name" : "AMBARI_SERVER"
-        },   
+       {
+         "name" : "AMBARI_SERVER"
+       }, 
+       {
+         "name" : "SECONDARY_NAMENODE"
+       },
+       {
+         "name" : "ZOOKEEPER_SERVER"
+       },
        {
          "name" : "FALCON_CLIENT"
        },
@@ -822,9 +828,9 @@ def create_blueprint(scenario_id):
        {
          "name" : "MAPREDUCE2_CLIENT"
        },
-        { 
-          "name" : "METRICS_MONITOR"
-        },	
+       {
+         "name" : "METRICS_MONITOR"
+       },
        {
          "name" : "OOZIE_CLIENT"
        },
@@ -855,18 +861,18 @@ def create_blueprint(scenario_id):
     {
       "name" : "master_2",
       "components" : [        
-        {
-          "name" : "DRPC_SERVER"
-        },		
-        {
-          "name" : "METRICS_COLLECTOR"
-        },
-		{
-          "name" : "NAMENODE"
-        },		
-		{
-          "name" : "ZOOKEEPER_SERVER"
-        },	   
+       {
+         "name" : "METRICS_COLLECTOR"
+       },
+       {
+         "name" : "NAMENODE"
+       },		
+       {
+         "name" : "NIMBUS"
+       },
+       {
+         "name" : "ZOOKEEPER_SERVER"
+       },	   
        {
          "name" : "FALCON_CLIENT"
        },
@@ -885,9 +891,9 @@ def create_blueprint(scenario_id):
        {
          "name" : "MAPREDUCE2_CLIENT"
        },
-        { 
-          "name" : "METRICS_MONITOR"
-        },	
+       {
+         "name" : "METRICS_MONITOR"
+       },
        {
          "name" : "OOZIE_CLIENT"
        },
@@ -919,10 +925,31 @@ def create_blueprint(scenario_id):
       "name" : "master_3",
       "components" : [
        {
-         "name" : "HIVE_SERVER"
-       }, 
+         "name" : "DRPC_SERVER"
+       },
+	   {
+         "name" : "FALCON_SERVER"
+       },
        {
-         "name" : "SUPERVISOR"
+         "name" : "HBASE_MASTER"
+       },
+       {
+         "name" : "HISTORYSERVER"
+       },
+       {
+         "name" : "HIVE_METASTORE"
+       },
+       {
+         "name" : "KAFKA_BROKER"
+       },
+       {
+         "name" : "OOZIE_SERVER"
+       },
+       {
+         "name" : "RESOURCEMANAGER"
+       },
+       {
+         "name" : "WEBHCAT_SERVER"
        },
        {
          "name" : "ZOOKEEPER_SERVER"
@@ -945,9 +972,9 @@ def create_blueprint(scenario_id):
        {
          "name" : "MAPREDUCE2_CLIENT"
        },
-        { 
-          "name" : "METRICS_MONITOR"
-        },	
+       {
+         "name" : "METRICS_MONITOR"
+       },
        {
          "name" : "OOZIE_CLIENT"
        },
@@ -1014,9 +1041,9 @@ def create_blueprint(scenario_id):
        {
          "name" : "MAPREDUCE2_CLIENT"
        },
-        { 
-          "name" : "METRICS_MONITOR"
-        },	
+       {
+         "name" : "METRICS_MONITOR"
+       },
        {
          "name" : "OOZIE_CLIENT"
        },
@@ -1040,7 +1067,7 @@ def create_blueprint(scenario_id):
        },	 
        {
          "name" : "ZOOKEEPER_CLIENT"
-       }
+      }
       ],
       "cardinality" : "1"
     },
@@ -1077,9 +1104,9 @@ def create_blueprint(scenario_id):
        {
          "name" : "MAPREDUCE2_CLIENT"
        },
-        { 
-          "name" : "METRICS_MONITOR"
-        },	
+       {
+         "name" : "METRICS_MONITOR"
+       },
        {
          "name" : "OOZIE_CLIENT"
        },
@@ -1113,15 +1140,15 @@ def create_blueprint(scenario_id):
     {
       "name" : "master_1",
       "components" : [
-        {
-          "name" : "AMBARI_SERVER"
-        },
-        {
-         "name" : "KAFKA_BROKER"
-        },
-        { 
-          "name" : "METRICS_COLLECTOR"
-        },	   
+       {
+         "name" : "AMBARI_SERVER"
+       },
+       {
+        "name" : "KAFKA_BROKER"
+       },
+       { 
+         "name" : "METRICS_COLLECTOR"
+       },	   
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1174,17 +1201,14 @@ def create_blueprint(scenario_id):
       "name" : "master_2",
       "components" : [        
        {
-         "name" : "METRICS_COLLECTOR"
+         "name" : "NAMENODE"
+       },		
+       {
+         "name" : "NIMBUS"
        },
-	   {
-          "name" : "NAMENODE"
-        },		
-        {
-          "name" : "NIMBUS"
-        },
-		{
-          "name" : "ZOOKEEPER_SERVER"
-        },	   
+       {
+         "name" : "ZOOKEEPER_SERVER"
+       },	   
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1237,34 +1261,10 @@ def create_blueprint(scenario_id):
       "name" : "master_3",
       "components" : [
        {
-         "name" : "DRPC_SERVER"
-       },
-	   {
-         "name" : "FALCON_SERVER"
+         "name" : "HIVE_SERVER"
        },
        {
-         "name" : "HBASE_MASTER"
-       },
-       {
-         "name" : "HISTORYSERVER"
-       },
-       {
-         "name" : "HIVE_METASTORE"
-       },
-       {
-         "name" : "KAFKA_BROKER"
-       },
-       {
-         "name" : "OOZIE_SERVER"
-       },
-       {
-         "name" : "RESOURCEMANAGER"
-       },
-       {
-         "name" : "SECONDARY_NAMENODE"
-       },
-       {
-         "name" : "WEBHCAT_SERVER"
+         "name" : "SUPERVISOR"
        },
        {
          "name" : "ZOOKEEPER_SERVER"
@@ -1386,12 +1386,12 @@ def create_blueprint(scenario_id):
     {
       "name" : "master_5",
       "components" : [
-        {
-          "name" : "NODEMANAGER"
-        },
-        {
+       {
+         "name" : "NODEMANAGER"
+       },
+       {
          "name" : "OOZIE_SERVER"
-        },
+       },
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1443,12 +1443,12 @@ def create_blueprint(scenario_id):
     {
       "name" : "master_6",
       "components" : [        
-        {
-          "name" : "RESOURCEMANAGER"
-        },		
-        {
-          "name" : "WEBHCAT_SERVER"
-        }, 
+       {
+         "name" : "RESOURCEMANAGER"
+       },		
+       {
+         "name" : "WEBHCAT_SERVER"
+       }, 
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1561,10 +1561,13 @@ def create_blueprint(scenario_id):
          "name" : "APP_TIMELINE_SERVER"
        },
        {
+         "name" : "DRPC_SERVER"
+       },
+       {
          "name" : "FALCON_SERVER"
        },
        {
-         "name" : "NIMBUS"
+         "name" : "ZOOKEEPER_SERVER"
        },   
        {
          "name" : "FALCON_CLIENT"
@@ -1751,7 +1754,7 @@ def create_blueprint(scenario_id):
                 "dfs.nfs.exports.allowed.hosts" : "* rw",
                 "dfs.datanode.max.xcievers" : "1024",
                 "dfs.block.access.token.enable" : "false",
-        "dfs.datanode.data.dir": "/disks/0/hadoop/hdfs/data,/disks/1/hadoop/hdfs/data,/disks/2/hadoop/hdfs/data,/disks/3/hadoop/hdfs/data,/disks/4/hadoop/hdfs/data,/disks/5/hadoop/hdfs/data,/disks/6/hadoop/hdfs/data,/disks/7/hadoop/hdfs/data,/disks/8/hadoop/hdfs/data,/disks/9/hadoop/hdfs/data,/disks/10/hadoop/hdfs/data,/disks/11/hadoop/hdfs/data,/disks/12/hadoop/hdfs/data,/disks/13/hadoop/hdfs/data,/disks/14/hadoop/hdfs/data,/disks/15/hadoop/hdfs/data",
+        "dfs.datanode.data.dir": "/disks/0/hadoop/hdfs/data,/disks/1/hadoop/hdfs/data,/disks/2/hadoop/hdfs/data,/disks/3/hadoop/hdfs/data,/disks/4/hadoop/hdfs/data,/disks/5/hadoop/hdfs/data,/disks/6/hadoop/hdfs/data,/disks/7/hadoop/hdfs/data",
         "dfs.namenode.checkpoint.dir": "/disks/0/hadoop/hdfs/namesecondary",
         "dfs.namenode.name.dir": "/disks/0/hadoop/hdfs/namenode,/disks/1/hadoop/hdfs/namenode,/disks/2/hadoop/hdfs/namenode,/disks/3/hadoop/hdfs/namenode,/disks/4/hadoop/hdfs/namenode,/disks/5/hadoop/hdfs/namenode,/disks/6/hadoop/hdfs/namenode,/disks/7/hadoop/hdfs/namenode",
         "dfs.datanode.failed.volumes.tolerated": "6"
@@ -1922,7 +1925,7 @@ def create_blueprint(scenario_id):
     },
     {
       "yarn-site": {
-        "yarn.nodemanager.local-dirs": "/disks/0/hadoop/yarn/local,/disks/1/hadoop/yarn/local,/disks/2/hadoop/yarn/local,/disks/3/hadoop/yarn/local,/disks/4/hadoop/yarn/local,/disks/5/hadoop/yarn/local,/disks/6/hadoop/yarn/local,/disks/7/hadoop/yarn/local",
+        "yarn.nodemanager.local-dirs": "/disks/0/hadoop/yarn/local,/disks/1/hadoop/yarn/local,/disks/2/hadoop/yarn/local,/disks/3/hadoop/yarn/local,/disks/4/hadoop/yarn/local,/disks/5/hadoop/yarn/local,/disks/6/hadoop/yarn/local,/disks/7/hadoop/yarn/local,/disks/8/hadoop/yarn/local,/disks/9/hadoop/yarn/local,/disks/10/hadoop/yarn/local,/disks/11/hadoop/yarn/local,/disks/12/hadoop/yarn/local,/disks/13/hadoop/yarn/local,/disks/14/hadoop/yarn/local,/disks/15/hadoop/yarn/local",
         "yarn.nodemanager.log-dirs": "/disks/0/hadoop/yarn/log,/disks/1/hadoop/yarn/log,/disks/2/hadoop/yarn/log,/disks/3/hadoop/yarn/log,/disks/4/hadoop/yarn/log,/disks/5/hadoop/yarn/log,/disks/6/hadoop/yarn/log,/disks/7/hadoop/yarn/log,/disks/8/hadoop/yarn/log,/disks/9/hadoop/yarn/log,/disks/10/hadoop/yarn/log,/disks/11/hadoop/yarn/log,/disks/12/hadoop/yarn/log,/disks/13/hadoop/yarn/log,/disks/14/hadoop/yarn/log,/disks/15/hadoop/yarn/log",
         "yarn.timeline-service.leveldb-timeline-store.path": "/disks/0/hadoop/yarn/timeline",
         "yarn.nodemanager.resource.memory-mb" : "32768",
@@ -1951,7 +1954,7 @@ def create_blueprint(scenario_id):
       "hdfs-site": {
         "dfs.datanode.data.dir": "/disks/0/hadoop/hdfs/data,/disks/1/hadoop/hdfs/data,/disks/2/hadoop/hdfs/data,/disks/3/hadoop/hdfs/data,/disks/4/hadoop/hdfs/data,/disks/5/hadoop/hdfs/data,/disks/6/hadoop/hdfs/data,/disks/7/hadoop/hdfs/data,/disks/8/hadoop/hdfs/data,/disks/9/hadoop/hdfs/data,/disks/10/hadoop/hdfs/data,/disks/11/hadoop/hdfs/data,/disks/12/hadoop/hdfs/data,/disks/13/hadoop/hdfs/data,/disks/14/hadoop/hdfs/data,/disks/15/hadoop/hdfs/data",
         "dfs.namenode.checkpoint.dir": "/disks/0/hadoop/hdfs/namesecondary",
-        "dfs.namenode.name.dir": "/disks/0/hadoop/hdfs/namenode,/disks/1/hadoop/hdfs/namenode,/disks/2/hadoop/hdfs/namenode,/disks/3/hadoop/hdfs/namenode,/disks/4/hadoop/hdfs/namenode,/disks/5/hadoop/hdfs/namenode,/disks/6/hadoop/hdfs/namenode,/disks/7/hadoop/hdfs/namenode",
+        "dfs.namenode.name.dir": "/disks/0/hadoop/hdfs/namenode,/disks/1/hadoop/hdfs/namenode,/disks/2/hadoop/hdfs/namenode,/disks/3/hadoop/hdfs/namenode,/disks/4/hadoop/hdfs/namenode,/disks/5/hadoop/hdfs/namenode,/disks/6/hadoop/hdfs/namenode,/disks/7/hadoop/hdfs/namenode,/disks/8/hadoop/hdfs/namenode,/disks/9/hadoop/hdfs/namenode,/disks/10/hadoop/hdfs/namenode,/disks/11/hadoop/hdfs/namenode,/disks/12/hadoop/hdfs/namenode,/disks/13/hadoop/hdfs/namenode,/disks/14/hadoop/hdfs/namenode,/disks/15/hadoop/hdfs/namenode",
         "dfs.datanode.failed.volumes.tolerated": "6",
         "dfs.nfs3.dump.dir" : "/tmp/.hdfs-nfs"
       }
@@ -1975,6 +1978,15 @@ def create_blueprint(scenario_id):
       "hbase.tmp.dir": "/disks/0/hadoop/hbase"
         }
     },
+        {
+            "webhcat-site" : {
+                "webhcat.proxyuser.hue.hosts" : "*",
+                "webhcat.proxyuser.hue.groups" : "*",
+                "webhcat.proxyuser.hcat.hosts" : "*",
+                "webhcat.proxyuser.hcat.groups" : "*",
+                "templeton.hive.properties" : "hive.metastore.local=false,hive.metastore.uris=thrift://sandbox.hortonworks.com:9083,hive.metastore.sasl.enabled=false,hive.metastore.execute.setugi=true,hive.metastore.warehouse.dir=/apps/hive/warehouse"
+            }
+        },
     {
       "storm-site": {
         "storm.local.dir": "/disks/0/hadoop/storm"
@@ -1989,8 +2001,29 @@ def create_blueprint(scenario_id):
       "hive-site": {
         "hive.auto.convert.join.noconditionaltask.size" : "716177408",
         "hive.tez.container.size" : "2048",
-        "hive.tez.java.opts" : "-server -Xmx1638m -Djava.net.preferIPv4Stack=true -XX:NewRatio=8 -XX:+UseNUMA -XX:+UseParallelGC",
-        "hive.metastore.uris" : "thrift://%HOSTGROUP::master_3%:9083"
+        "hive.metastore.uris" : "thrift://%HOSTGROUP::master_3%:9083",
+        
+	"javax.jdo.option.ConnectionPassword" : "hive",
+	"hive.tez.java.opts" : "-server -Xmx200m -Djava.net.preferIPv4Stack=true",
+	"hive.heapsize" : "250",
+	"hive.users.in.admin.role" : "hue,hive",
+	"hive_metastore_user_passwd" : "hive",
+	"hive.server2.enable.impersonation": "true",
+
+	"hive.compactor.check.interval": "300s",
+	"hive.compactor.initiator.on": "true",
+	"hive.compactor.worker.timeout": "86400s",
+	"hive.enforce.bucketing": "true",
+	"hive.support.concurrency": "true",
+	"hive.exec.dynamic.partition.mode": "nonstrict",
+	"hive.server2.enable.doAs": "true",
+	"hive.txn.manager": "org.apache.hadoop.hive.ql.lockmgr.DbTxnManager",
+	"hive.txn.max.open.batch": "1000",
+	"hive.txn.timeout": "300",
+	"hive.security.authorization.enabled": "false",
+	"hive.users.in.admin.role": "hue,hive"
+        
+        
       }
     }
   ]

@@ -82,7 +82,8 @@
             "type": "string", 
             "defaultValue": "Eval", 
             "allowedValues": [ 
-                "Eval"
+                "Eval",
+				"Small"
             ], 
             "metadata": { 
                 "Description": "T-shirt size of the Hortonworks cluster" 
@@ -126,15 +127,17 @@
             "masterVmSize": "Standard_A3",            
             "masterNodeTemplateUri": "/cluster-node-8disk.json",
             "workerVmSize": "Standard_A3",
-            "workerNodeTemplateUri": "/cluster-node-8disk.json"
-        },
+            "workerNodeTemplateUri": "/cluster-node-8disk.json",
+        	"blueprint": "evaluation"
+		},
         "clusterTshirtSizeSmall": {
             "nameNodeCount": 3,
             "dataNodeCount": 9,
             "masterVmSize": "Standard_A6",            
             "masterNodeTemplateUri": "/cluster-node-8disk.json",
             "workerVmSize": "Standard_A7",
-            "workerNodeTemplateUri": "/cluster-node-16disk.json"
+            "workerNodeTemplateUri": "/cluster-node-16disk.json",
+			"blueprint": "small"
         },
         "clusterTshirtSizeMedium": {
             "nameNodeCount": 3,
@@ -142,7 +145,8 @@
             "masterVmSize": "Standard_A7",            
             "masterNodeTemplateUri": "/cluster-node-16disk.json",
             "workerVmSize": "Standard_A7",
-            "workerNodeTemplateUri": "/cluster-node-16disk.json"         
+            "workerNodeTemplateUri": "/cluster-node-16disk.json",
+			"blueprint": "medium"
         },
         "clusterSpec": "[variables(concat('clusterTshirtSize', parameters('tshirtSize')))]",
         "masterNodeASName": "[concat(parameters('dnsNamePrefix'), '-mnAS')]",

@@ -17,6 +17,9 @@ NAMESUFFIX=$3
 NAMENODES=$4
 DATANODES=$5
 ADMINUSER=$6
+BLUEPRINT=$7
+
+set -e
 
 # Converts a domain like machine.domain.com to domain.com by removing the machine name
 NAMESUFFIX=`echo $NAMESUFFIX | sed 's/^[^.]*\.//'`
@@ -76,4 +79,5 @@ do
 done
 IFS=',';WORKER_NODE_IPS="${WORKER_NODES[*]}";IFS=$' \t\n'
 
-sudo python vm-bootstrap.py --action 'bootstrap' --cluster_id $NAMEPREFIX --scenario_id 'evaluation' --num_masters $MASTERNODES --num_workers $DATANODES --master_prefix "$NAMEPREFIX-mn-" --worker_prefix "$NAMEPREFIX-wn-" --domain_name ".$NAMESUFFIX" --admin_password 'admin' --masters_iplist $MASTER_NODE_IPS --workers_iplist $WORKER_NODE_IPS --id_padding 1
+sudo python vm-bootstrap.py --action 'bootstrap' --cluster_id $NAMEPREFIX --scenario_id "$BLUEPRINT" --num_masters $MASTERNODES --num_workers $DATANODES --master_prefix "$NAMEPREFIX-mn-" --worker_prefix "$NAMEPREFIX-wn-" --domain_name ".$NAMESUFFIX" --admin_password 'admin' --masters_iplist $MASTER_NODE_IPS --workers_iplist $WORKER_NODE_IPS --id_padding 1
+]

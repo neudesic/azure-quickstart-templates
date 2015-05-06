@@ -149,7 +149,7 @@
                         "[concat(parameters('scriptsUri'), '/scripts/mountDisk.sh')]",
                         "[concat(parameters('scriptsUri'), '/scripts/vm-bootstrap.py')]"    
                     ],
-                    "commandToExecute": "[concat('sh initialize-master.sh \"', parameters('networkSpec').privateIPPrefix, '\" \"', parameters('dnsNamePrefix'), '\" \"', reference(variables('vmName')).outputs.fqdn.value, '\" ', parameters('clusterSpec').nameNodeCount, ' ', parameters('clusterSpec').dataNodeCount, ' \"', parameters('vmSpec').adminUserName, '\"')]"                    
+                    "commandToExecute": "[concat('sh initialize-master.sh \"', parameters('networkSpec').privateIPPrefix, '\" \"', parameters('dnsNamePrefix'), '\" \"', reference(variables('vmName')).outputs.fqdn.value, '\" ', parameters('clusterSpec').nameNodeCount, ' ', parameters('clusterSpec').dataNodeCount, ' \"', parameters('vmSpec').adminUserName, '\" \"', parameters('clusterSpec').blueprint, '\"')]"                    
                 }
             }
         }
