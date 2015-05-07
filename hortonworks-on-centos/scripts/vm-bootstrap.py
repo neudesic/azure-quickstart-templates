@@ -1978,6 +1978,15 @@ def create_blueprint(scenario_id):
       "hbase.tmp.dir": "/disks/0/hadoop/hbase"
         }
     },
+        {
+            "webhcat-site" : {
+                "webhcat.proxyuser.hue.hosts" : "*",
+                "webhcat.proxyuser.hue.groups" : "*",
+                "webhcat.proxyuser.hcat.hosts" : "*",
+                "webhcat.proxyuser.hcat.groups" : "*",
+                "templeton.hive.properties" : "hive.metastore.local=false,hive.metastore.uris=thrift://sandbox.hortonworks.com:9083,hive.metastore.sasl.enabled=false,hive.metastore.execute.setugi=true,hive.metastore.warehouse.dir=/apps/hive/warehouse"
+            }
+        },
     {
       "storm-site": {
         "storm.local.dir": "/disks/0/hadoop/storm"
