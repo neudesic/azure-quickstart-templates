@@ -17,6 +17,8 @@ NAMESUFFIX=$3
 NAMENODES=$4
 DATANODES=$5
 
+set -e
+
 # Converts a domain like machine.domain.com to domain.com by removing the machine name
 NAMESUFFIX=`echo $NAMESUFFIX | sed 's/^[^.]*\.//'`
 

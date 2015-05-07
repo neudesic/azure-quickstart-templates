@@ -19,6 +19,8 @@ DATANODES=$5
 ADMINUSER=$6
 BLUEPRINT=$7
 
+set -e
+
 # Converts a domain like machine.domain.com to domain.com by removing the machine name
 NAMESUFFIX=`echo $NAMESUFFIX | sed 's/^[^.]*\.//'`
 
