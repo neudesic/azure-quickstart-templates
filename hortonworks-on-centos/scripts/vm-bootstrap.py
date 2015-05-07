@@ -212,7 +212,7 @@ def poll_until_all_agents_registered(num_hosts, timeout):
           all_hosts_registered = True
           break
     except :
-	    logger.exception('Could not poll agent status from the server.')
+      logger.exception('Could not poll agent status from the server.')
     time.sleep(5)
   if not all_hosts_registered:
     raise Exception('Timed out while waiting for all agents to register')
@@ -233,7 +233,7 @@ def create_blueprint(scenario_id):
   evaluation_host_groups = [
    {
      "name" : "master_1",
-     "components" : [	   
+     "components" : [    
        {
          "name" : "AMBARI_SERVER"
        },
@@ -248,14 +248,14 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "NIMBUS"
-       },	 
-	   {
+       },  
+     {
          "name" : "SECONDARY_NAMENODE"
-       },	 
-	   {
+       },  
+     {
          "name" : "SPARK_JOBHISTORYSERVER"
-       },	 
-	   {
+       },  
+     {
          "name" : "STORM_UI_SERVER"
        },
        {
@@ -299,7 +299,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -344,7 +344,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -386,7 +386,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -399,7 +399,7 @@ def create_blueprint(scenario_id):
        {
          "name" : "DATANODE"
        },
-	   {
+     {
          "name" : "HBASE_REGIONSERVER"
        },
        {
@@ -407,7 +407,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "SUPERVISOR"
-       },	   	   
+       },        
        {
          "name" : "FALCON_CLIENT"
        },
@@ -449,7 +449,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -512,7 +512,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -527,13 +527,13 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "NAMENODE"
-       },		
+       },   
        {
          "name" : "NIMBUS"
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -575,7 +575,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -588,7 +588,7 @@ def create_blueprint(scenario_id):
        {
          "name" : "DRPC_SERVER"
        },
-	   {
+     {
          "name" : "FALCON_SERVER"
        },
        {
@@ -614,7 +614,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -656,7 +656,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -683,7 +683,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -725,7 +725,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
       }
@@ -738,7 +738,7 @@ def create_blueprint(scenario_id):
        {
          "name" : "DATANODE"
        },
-	   {
+     {
          "name" : "HBASE_REGIONSERVER"
        },
        {
@@ -746,7 +746,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "SUPERVISOR"
-       },	   	   
+       },        
        {
          "name" : "FALCON_CLIENT"
        },
@@ -788,7 +788,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -851,7 +851,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -866,13 +866,13 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "NAMENODE"
-       },		
+       },   
        {
          "name" : "NIMBUS"
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -914,7 +914,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -927,7 +927,7 @@ def create_blueprint(scenario_id):
        {
          "name" : "DRPC_SERVER"
        },
-	   {
+     {
          "name" : "FALCON_SERVER"
        },
        {
@@ -953,7 +953,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -995,7 +995,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1022,7 +1022,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1064,7 +1064,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
       }
@@ -1077,7 +1077,7 @@ def create_blueprint(scenario_id):
        {
          "name" : "DATANODE"
        },
-	   {
+     {
          "name" : "HBASE_REGIONSERVER"
        },
        {
@@ -1085,7 +1085,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "SUPERVISOR"
-       },	   	   
+       },        
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1127,7 +1127,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1148,7 +1148,7 @@ def create_blueprint(scenario_id):
        },
        { 
          "name" : "METRICS_COLLECTOR"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1169,7 +1169,7 @@ def create_blueprint(scenario_id):
        },
        { 
          "name" : "METRICS_MONITOR"
-       },	
+       }, 
        {
          "name" : "OOZIE_CLIENT"
        },
@@ -1190,7 +1190,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1202,13 +1202,13 @@ def create_blueprint(scenario_id):
       "components" : [        
        {
          "name" : "NAMENODE"
-       },		
+       },   
        {
          "name" : "NIMBUS"
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1250,7 +1250,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1268,7 +1268,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1310,7 +1310,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1334,7 +1334,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "ZOOKEEPER_SERVER"
-       },	   
+       },    
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1376,7 +1376,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1433,7 +1433,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1445,7 +1445,7 @@ def create_blueprint(scenario_id):
       "components" : [        
        {
          "name" : "RESOURCEMANAGER"
-       },		
+       },   
        {
          "name" : "WEBHCAT_SERVER"
        }, 
@@ -1490,7 +1490,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1503,7 +1503,7 @@ def create_blueprint(scenario_id):
        {
          "name" : "HBASE_MASTER"
        },
-	   {
+     {
          "name" : "HISTORYSERVER"
        },   
        {
@@ -1547,7 +1547,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1610,7 +1610,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1623,12 +1623,12 @@ def create_blueprint(scenario_id):
        {
          "name" : "DATANODE"
        },
-	   {
+     {
          "name" : "HBASE_REGIONSERVER"
        },
        {
          "name" : "NODEMANAGER"
-       },	   	   
+       },        
        {
          "name" : "FALCON_CLIENT"
        },
@@ -1670,7 +1670,7 @@ def create_blueprint(scenario_id):
        },
        {
          "name" : "YARN_CLIENT"
-       },	 
+       },  
        {
          "name" : "ZOOKEEPER_CLIENT"
        }
@@ -1687,8 +1687,6 @@ def create_blueprint(scenario_id):
     host_groups = medium_host_groups
   elif scenario_id == 'large':
     host_groups = large_host_groups
-
-  host_groups = evaluation_host_groups if scenario_id == 'evaluation' else small_host_groups
 
   evaluation_configurations = [
     {
@@ -1764,13 +1762,13 @@ def create_blueprint(scenario_id):
       
         },
         {
-		  "global": {
-			"oozie_data_dir": "/disks/0/hadoop/oozie/data",
-			"zk_data_dir": "/disks/0/hadoop/zookeeper",
-			"falcon.embeddedmq.data": "/disks/0/hadoop/falcon/embeddedmq/data",
-			"falcon_local_dir": "/disks/0/hadoop/falcon",
-			"namenode_heapsize" : "16384m"
-			}
+      "global": {
+      "oozie_data_dir": "/disks/0/hadoop/oozie/data",
+      "zk_data_dir": "/disks/0/hadoop/zookeeper",
+      "falcon.embeddedmq.data": "/disks/0/hadoop/falcon/embeddedmq/data",
+      "falcon_local_dir": "/disks/0/hadoop/falcon",
+      "namenode_heapsize" : "16384m"
+      }
         },
         {
             "hive-site" : {
@@ -1849,7 +1847,7 @@ def create_blueprint(scenario_id):
                 "webhcat.proxyuser.hue.groups" : "*",
                 "webhcat.proxyuser.hcat.hosts" : "*",
                 "webhcat.proxyuser.hcat.groups" : "*",
-                "templeton.hive.properties" : "hive.metastore.local=false,hive.metastore.uris=thrift://sandbox.hortonworks.com:9083,hive.metastore.sasl.enabled=false,hive.metastore.execute.setugi=true,hive.metastore.warehouse.dir=/apps/hive/warehouse"
+                "templeton.hive.properties" : "hive.metastore.local=false,hive.metastore.uris=thrift://%HOSTGROUP::master_2%:9083,hive.metastore.sasl.enabled=false,hive.metastore.execute.setugi=true,hive.metastore.warehouse.dir=/apps/hive/warehouse"
             }
         },
         {
@@ -1984,7 +1982,7 @@ def create_blueprint(scenario_id):
                 "webhcat.proxyuser.hue.groups" : "*",
                 "webhcat.proxyuser.hcat.hosts" : "*",
                 "webhcat.proxyuser.hcat.groups" : "*",
-                "templeton.hive.properties" : "hive.metastore.local=false,hive.metastore.uris=thrift://sandbox.hortonworks.com:9083,hive.metastore.sasl.enabled=false,hive.metastore.execute.setugi=true,hive.metastore.warehouse.dir=/apps/hive/warehouse"
+                "templeton.hive.properties" : "hive.metastore.local=false,hive.metastore.uris=thrift://%HOSTGROUP::master_4%:9083,hive.metastore.sasl.enabled=false,hive.metastore.execute.setugi=true,hive.metastore.warehouse.dir=/apps/hive/warehouse"
             }
         },
     {
@@ -2001,27 +1999,27 @@ def create_blueprint(scenario_id):
       "hive-site": {
         "hive.auto.convert.join.noconditionaltask.size" : "716177408",
         "hive.tez.container.size" : "2048",
-        "hive.metastore.uris" : "thrift://%HOSTGROUP::master_3%:9083",
+        "hive.metastore.uris" : "thrift://%HOSTGROUP::master_4%:9083",
         
-	"javax.jdo.option.ConnectionPassword" : "hive",
-	"hive.tez.java.opts" : "-server -Xmx200m -Djava.net.preferIPv4Stack=true",
-	"hive.heapsize" : "250",
-	"hive.users.in.admin.role" : "hue,hive",
-	"hive_metastore_user_passwd" : "hive",
-	"hive.server2.enable.impersonation": "true",
+  "javax.jdo.option.ConnectionPassword" : "hive",
+  "hive.tez.java.opts" : "-server -Xmx200m -Djava.net.preferIPv4Stack=true",
+  "hive.heapsize" : "250",
+  "hive.users.in.admin.role" : "hue,hive",
+  "hive_metastore_user_passwd" : "hive",
+  "hive.server2.enable.impersonation": "true",
 
-	"hive.compactor.check.interval": "300s",
-	"hive.compactor.initiator.on": "true",
-	"hive.compactor.worker.timeout": "86400s",
-	"hive.enforce.bucketing": "true",
-	"hive.support.concurrency": "true",
-	"hive.exec.dynamic.partition.mode": "nonstrict",
-	"hive.server2.enable.doAs": "true",
-	"hive.txn.manager": "org.apache.hadoop.hive.ql.lockmgr.DbTxnManager",
-	"hive.txn.max.open.batch": "1000",
-	"hive.txn.timeout": "300",
-	"hive.security.authorization.enabled": "false",
-	"hive.users.in.admin.role": "hue,hive"
+  "hive.compactor.check.interval": "300s",
+  "hive.compactor.initiator.on": "true",
+  "hive.compactor.worker.timeout": "86400s",
+  "hive.enforce.bucketing": "true",
+  "hive.support.concurrency": "true",
+  "hive.exec.dynamic.partition.mode": "nonstrict",
+  "hive.server2.enable.doAs": "true",
+  "hive.txn.manager": "org.apache.hadoop.hive.ql.lockmgr.DbTxnManager",
+  "hive.txn.max.open.batch": "1000",
+  "hive.txn.timeout": "300",
+  "hive.security.authorization.enabled": "false",
+  "hive.users.in.admin.role": "hue,hive"
         
         
       }
