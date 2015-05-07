@@ -71,8 +71,3 @@ done
 IFS=',';WORKER_NODE_IPS="${WORKER_NODES[*]}";IFS=$' \t\n'
 
 sudo python vm-bootstrap.py --action 'bootstrap' --cluster_id $NAMEPREFIX --scenario_id 'evaluation' --num_masters $MASTERNODES --num_workers $DATANODES --master_prefix "$NAMEPREFIX-mn-" --worker_prefix "$NAMEPREFIX-wn-" --domain_name ".$NAMESUFFIX" --admin_password 'admin' --masters_iplist $MASTER_NODE_IPS --workers_iplist $WORKER_NODE_IPS --id_padding 1
-RESULT=$?
-if [ $RESULT -ne 0 ]; then
-	echo "Installation failed"
-	exit $RESULT
-fi
