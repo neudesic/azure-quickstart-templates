@@ -116,7 +116,7 @@
         }
     },
     "variables": {
-        "scriptsUri": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/hortonworks-on-centos",          
+        "scriptsUri": "https://raw.githubusercontent.com/neudesic/azure-quickstart-templates/hortonworks/hortonworks-on-centos",          
         "storageAccount": {
             "prefix": "[parameters('storageAccountPrefix')]",
             "type": "[parameters('storageAccountType')]"
@@ -132,7 +132,7 @@
 		},
         "clusterTshirtSizeSmall": {
             "nameNodeCount": 3,
-            "dataNodeCount": 9,
+            "dataNodeCount": 3,
             "masterVmSize": "Standard_A6",            
             "masterNodeTemplateUri": "/cluster-node-8disk.json",
             "workerVmSize": "Standard_A7",
